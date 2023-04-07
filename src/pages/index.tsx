@@ -22,7 +22,9 @@ export default function Home() {
         <Navigation />
       </header>
 
-      <main className="w-full"></main>
+      <main className="w-full min-h-screen">
+        <h1>Content</h1>
+      </main>
     </>
   );
 }
