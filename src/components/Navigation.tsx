@@ -63,12 +63,12 @@ const Navigation: FC = () => {
         </div>
       </aside>
       {/* Mobile Menu Background Blur */}
-      <div
-        className={`absolute overflow-hidden sm:hidden top-0 bottom-0 h-100 w-full ${
-          open ? "backdrop-blur-sm" : ""
-        } z-9`}
-        onClick={handleClose}
-      />
+      {open ? (
+        <div
+          className="absolute overflow-hidden sm:hidden top-0 bottom-0 h-100 w-full backdrop-blur-sm z-9"
+          onClick={handleClose}
+        />
+      ) : null}
     </>
   );
 };

@@ -104,3 +104,16 @@ a {
     color-scheme: dark;
   }
 }
+
+.above-title::before {
+  content: "";
+  display: inline-block;
+  border: 1px solid grey;
+  width: 12px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+
+svg {
+  color: white
+}
