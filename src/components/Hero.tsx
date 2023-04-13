@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import GithubIcon from "/public/icons/github-outline-svgrepo.svg";
+import LinkedInIcon from "/public/icons/linkedin-outline-svgrepo.svg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,9 +12,9 @@ const EXTERNAL_LINKS = [
     alt: "Github Icon",
   },
   {
-    href: "https://github.com/GabrielCee27",
-    icon: GithubIcon,
-    alt: "Github Icon",
+    href: "https://www.linkedin.com/in/gabe-cisneros",
+    icon: LinkedInIcon,
+    alt: "Linked In Icon",
   },
 ];
 
