@@ -10,12 +10,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 import { FC } from "react";
 
-const AnimatedHamburger: FC<{ isOpen: boolean; onClick: () => void }> = ({
-  isOpen,
-  onClick,
-}) => {
+const AnimatedHamburger: FC<{
+  isOpen: boolean;
+  onClick: () => void;
+  className?: string;
+}> = ({ isOpen, onClick, className = "" }) => {
   return (
-    <button className="relative group" onClick={onClick}>
+    <button className={"relative group " + className} onClick={onClick}>
       <div className="relative flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all duration-200">
         <div className="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
           <div
