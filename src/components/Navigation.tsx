@@ -7,9 +7,9 @@ const NAV_ITEMS = [
   { href: "#projects", label: "Projects", current: false },
 ] as const;
 
-const MOBILE_MENU_Z_INDEX = "z-[9]";
-const BLUR_Z_INDEX = "z-[8]";
-const NAV_Z_INDEX = "z-10";
+const NAV_Z_INDEX = "z-[9]";
+const BLUR_Z_INDEX = "z-[10]";
+const MOBILE_MENU_Z_INDEX = "z-[11]";
 const MOBILE_ICONS_Z_INDEX = "z-[12]";
 
 const Navigation: FC = () => {
@@ -69,14 +69,14 @@ const Navigation: FC = () => {
             </div>
           </div>
         </div>
+        {/* Mobile Menu Background Blur */}
+        {open ? (
+          <div
+            className={`absolute overflow-hidden sm:hidden top-0 bottom-0 min-h-screen w-full backdrop-blur-sm ${BLUR_Z_INDEX}`}
+            onClick={handleClose}
+          />
+        ) : null}
       </nav>
-      {/* Mobile Menu Background Blur */}
-      {open ? (
-        <div
-          className={`absolute overflow-hidden sm:hidden top-0 bottom-0 h-100 w-full backdrop-blur-sm ${BLUR_Z_INDEX}`}
-          onClick={handleClose}
-        />
-      ) : null}
     </>
   );
 };
