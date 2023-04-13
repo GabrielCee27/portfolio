@@ -30,7 +30,7 @@ const Navigation: FC = () => {
         <div className="mx-auto max-w-7xl px-9 pt-2">
           <div className="relative flex h-16 items-center justify-between text-md sm:text-sm">
             <a href="#" className={MOBILE_ICONS_Z_INDEX} onClick={handleClose}>
-              Gabriel.
+              G.
             </a>
             <div className="hidden sm:block flex space-x-10 items-center">
               {NAV_ITEMS.map((item) => (
