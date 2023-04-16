@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import Image from "next/image";
 import GithubIcon from "/public/icons/github-outline-svgrepo.svg";
 import LinkedInIcon from "/public/icons/linkedin-outline-svgrepo.svg";
+import Avatar from "/public/images/avatar.png";
+import NextImage from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,8 +24,8 @@ const ICON_WIDTH = 20;
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center">
-      <div className="flex flex-col-reverse justify-end gap-4 md:flex-row md:justify-around md:gap-0 items-center w-full">
+    <section className="min-h-screen flex flex-col justify-evenly md:flex-row items-center md:justify-center">
+      <div className="flex flex-col-reverse items-start justify-end gap-4 md:flex-row md:justify-around md:gap-0 md:items-center w-full">
         <div className="flex flex-col gap-5 justify-center max-w-md">
           <h1
             className={`text-[.6rem] ${inter.className} text-gray-300 tracking-[.5em] above-title`}
@@ -55,7 +57,12 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="w-[125px] h-[150px] md:w-[340px] md:h-[398px] bg-blue-200 rounded-md" />
+        <div className="hidden md:flex items-end h-72 w-64 bg-blue-50 rounded-md">
+          <NextImage src={Avatar} alt="avatar" />
+        </div>
+      </div>
+      <div className="flex items-end justify-start md:hidden bg-blue-50 w-screen h-52">
+        <NextImage src={Avatar} alt="avatar" height={200} width={200} />
       </div>
     </section>
   );
