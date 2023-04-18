@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import Career from "@/components/Career";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -24,8 +25,9 @@ export default function Home() {
         <Navigation />
       </header>
 
-      <main className="w-full min-h-screen px-10">
+      <main className="w-full min-h-screen px-10 mt-[72px] md:mt-0">
         <Hero />
+        <Career />
       </main>
     </>
   );
