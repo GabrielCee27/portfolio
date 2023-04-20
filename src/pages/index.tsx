@@ -25,7 +25,7 @@ export default function Home() {
         <Navigation />
       </header>
 
-      <main className="w-full min-h-screen px-10 mt-[72px] md:mt-0">
+      <main className="w-full min-h-screen px-10 max-w-7xl m-auto md:px-16 pb-3 mt-[72px] md:mt-0">
         <Hero />
         <Career />
       </main>
