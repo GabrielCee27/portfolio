@@ -114,6 +114,15 @@ a {
   margin-bottom: 3px;
 }
 
+.career-body li::before {
+  content: "";
+  display: inline-block;
+  border: 1px solid grey;
+  width: 8px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+
 svg {
   color: white
 }

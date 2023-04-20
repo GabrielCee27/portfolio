@@ -61,27 +61,29 @@ const Career: FC = () => {
               role="tabpanel"
               aria-labelledby={`career-tab-${index}`}
             >
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-3">
                 <p>{ex.role}</p>
                 <p className="text-xs text-gray-300">{ex.location}</p>
                 <p className="text-xs text-gray-300 font-medium">{ex.dates}</p>
                 <ul className="flex flex-row gap-3">
-                  <li className="rounded-md p-1 border border-gray-300 text-xs">
-                    Next.js
-                  </li>
-                  <li className="rounded-md p-1 border border-gray-300 text-xs">
-                    Prismic
-                  </li>
+                  {["Next.js", "Prismic"].map((item) => (
+                    <li className="rounded-md py-1 px-2 border border-gray-300 text-xs">
+                      {item}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
           );
         })}
         <div className="h-[.5px] w-full bg-gray-300/50" />
-        <ul>
-          <li>improving site</li>
-          <li>improving site</li>
-        </ul>
+        <div className="career-body text-sm text-gray-200">
+          <ul>
+            {["Improve Site", "Improve Site"].map((item) => (
+              <li className="pt-1">{item}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
