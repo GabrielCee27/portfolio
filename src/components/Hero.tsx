@@ -42,8 +42,8 @@ const Hero = () => {
             opportunity involving customer facing React applications.
           </p>
           <div className="flex flex-row gap-5">
-            {EXTERNAL_LINKS.map(({ href, icon, alt }) => (
-              <a href={href} target="_blank">
+            {EXTERNAL_LINKS.map(({ href, icon, alt }, index) => (
+              <a href={href} target="_blank" key={`external-link-${index}`}>
                 <Image
                   src={icon}
                   alt={alt}

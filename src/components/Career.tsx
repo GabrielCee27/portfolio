@@ -91,32 +91,6 @@ const Career: FC = () => {
             </div>
           </div>
         </div>
-
-        {/* <div className="md:hidden" role="tablist" aria-labelledby="tablist-1">
-          <ul className="flex flex-row gap-4">
-            {WORK_EXPERIENCE.map((ex, index) => {
-              const isSelected = selectedTab == index;
-              return (
-                <li>
-                  <button
-                    className={`${
-                      isSelected ? "bg-blue-300" : ""
-                    } rounded-full p-2 px-3`}
-                    onClick={() => {
-                      setSelectedTab(index);
-                    }}
-                    id={`career-tab-${index}`}
-                    role="tab"
-                    aria-selected={isSelected ? "true" : "false"}
-                    aria-controls={`career-tabpanel-${index}`}
-                  >
-                    {ex.company}
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-        </div> */}
       </div>
     </section>
   );

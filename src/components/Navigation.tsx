@@ -33,8 +33,9 @@ const Navigation: FC = () => {
               G.
             </a>
             <div className="hidden sm:block flex space-x-10 items-center">
-              {NAV_ITEMS.map((item) => (
+              {NAV_ITEMS.map((item, index) => (
                 <a
+                  key={`nav-link-${index}`}
                   href={item.href}
                   className={`${
                     item.current ? "text-white" : "text-gray-400"
