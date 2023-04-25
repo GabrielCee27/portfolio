@@ -12,8 +12,7 @@ const Hero = () => {
     <section className="min-h-screen flex flex-col justify-evenly md:flex-row items-center md:justify-center">
       <div className="flex flex-col-reverse items-start justify-end gap-4 md:flex-row md:justify-between md:gap-0 md:items-center w-full">
         <div className="flex flex-col gap-5 justify-center max-w-md">
-          <AboveTitle>MY NAME IS</AboveTitle>
-          <Title>
+          <Title aboveTitle="MY NAME IS">
             Gabriel <span className="text-blue-300">Cisneros.</span>
           </Title>
           <p className={`${inter.className} text-sm text-gray-200`}>

@@ -1,5 +1,4 @@
 import { FC, useState } from "react";
-import AboveTitle from "./Text/AboveTitle";
 import Title from "./Text/Title";
 
 const WORK_EXPERIENCE = [
@@ -23,10 +22,7 @@ const Career: FC = () => {
   return (
     <section>
       <div className="flex flex-col gap-5">
-        <div className="flex flex-col gap-3">
-          <AboveTitle>CAREER PATH</AboveTitle>
-          <Title>Work Experience</Title>
-        </div>
+        <Title aboveTitle="CAREER PATH">Work Experience</Title>
 
         <div className="flex flex-col gap-4 md:gap-24 md:flex-row">
           <ul className="flex flex-row gap-4 md:flex-col md:w-[40%] md:justify-center">
