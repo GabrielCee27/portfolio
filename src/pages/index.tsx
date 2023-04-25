@@ -4,8 +4,11 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Career from "@/components/Career";
+import Projects from "@/components/Projects";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
+
+const SECTION_PADDING = "pt-52";
 
 export default function Home() {
   return (
@@ -27,7 +30,12 @@ export default function Home() {
 
       <main className="w-full min-h-screen px-10 max-w-7xl m-auto md:px-16 pb-3 mt-[72px] md:mt-0">
         <Hero />
-        <Career />
+        <section id="experience" className={SECTION_PADDING}>
+          <Career />
+        </section>
+        <section id="projects" className={SECTION_PADDING}>
+          <Projects />
+        </section>
       </main>
     </>
   );
