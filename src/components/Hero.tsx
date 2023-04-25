@@ -1,28 +1,11 @@
 import { Inter } from "next/font/google";
-import Image from "next/image";
-import GithubIcon from "/public/icons/github-outline-svgrepo.svg";
-import LinkedInIcon from "/public/icons/linkedin-outline-svgrepo.svg";
 import Avatar from "/public/images/avatar.png";
 import NextImage from "next/image";
 import AboveTitle from "./Text/AboveTitle";
 import Title from "./Text/Title";
+import ExternalIconLinks from "./ExternalIconLinks";
 
 const inter = Inter({ subsets: ["latin"] });
-
-const EXTERNAL_LINKS = [
-  {
-    href: "https://github.com/GabrielCee27",
-    icon: GithubIcon,
-    alt: "Github Icon",
-  },
-  {
-    href: "https://www.linkedin.com/in/gabe-cisneros",
-    icon: LinkedInIcon,
-    alt: "Linked In Icon",
-  },
-];
-
-const ICON_WIDTH = 20;
 
 const Hero = () => {
   return (
@@ -42,16 +25,7 @@ const Hero = () => {
             opportunity involving customer facing React applications.
           </p>
           <div className="flex flex-row gap-5">
-            {EXTERNAL_LINKS.map(({ href, icon, alt }, index) => (
-              <a href={href} target="_blank" key={`external-link-${index}`}>
-                <Image
-                  src={icon}
-                  alt={alt}
-                  width={ICON_WIDTH}
-                  height={ICON_WIDTH}
-                />
-              </a>
-            ))}
+            <ExternalIconLinks />
           </div>
         </div>
 
