@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Title from "./Text/Title";
 import NextImage from "next/image";
+import Pills from "./Pills";
 
 interface Project {
   name: string;
@@ -58,16 +59,9 @@ const Projects = () => {
               />
               <div className="relative rounded-b bg-slate-100 py-4 px-3 text-black flex flex-col gap-1">
                 <p className="">{p.name}</p>
-                <ul className="flex flex-row flex-wrap">
-                  {["Flask", "Python"].map((tech, index) => (
-                    <li
-                      key={index}
-                      className="rounded-md mr-2 py-0.5 px-1.5 border border-gray-300 text-[11px]"
-                    >
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
+                <span className="text-gray-700">
+                  <Pills items={["Flask", "Python"]} />
+                </span>
               </div>
             </div>
           );

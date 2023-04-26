@@ -1,5 +1,6 @@
 import { FC, useState } from "react";
 import Title from "./Text/Title";
+import Pills from "./Pills";
 
 const WORK_EXPERIENCE = [
   {
@@ -64,13 +65,7 @@ const Career: FC = () => {
                   <p className="text-xs text-gray-300 font-medium">
                     {ex.dates}
                   </p>
-                  <ul className="flex flex-row gap-3">
-                    {["Next.js", "Prismic"].map((item) => (
-                      <li className="rounded-md py-1 px-2 border border-gray-300 text-xs">
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <Pills items={["Next.js", "Prismic"]} />
                 </div>
               </div>
             );
