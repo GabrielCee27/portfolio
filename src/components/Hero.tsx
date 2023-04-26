@@ -20,11 +20,18 @@ const Hero = () => {
           </Title>
           <p className={`${inter.className} text-sm text-gray-200`}>
             Full Stack Software Engineer with 4+ years of experience with an
-            emphasis in React. I am currently the team lead of Seller Retention
-            at The RealReal which involves working in a fast-pace agile
-            environment and ensuring seller facing features are delivered on
-            time. Having a preference for frontend, I am excited about any
-            opportunity involving customer facing React applications.
+            emphasis in React. Currently, I am the team lead of Seller Retention
+            at{" "}
+            <a
+              href="https://www.therealreal.com"
+              target="_blank"
+              className="underline decoration-dotted"
+            >
+              The RealReal
+            </a>{" "}
+            which involves working in a fast-pace agile environment and ensuring
+            seller facing features are delivered on time. I am excited about any
+            opportunity involving customer facing web applications.
           </p>
           <div className="flex flex-row gap-5">
             <ExternalIconLinks />
