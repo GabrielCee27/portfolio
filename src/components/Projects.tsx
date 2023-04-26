@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import Title from "./Text/Title";
 import NextImage from "next/image";
-import Pills from "./Pills";
+import Pills from "./plls";
 
 interface Project {
   name: string;

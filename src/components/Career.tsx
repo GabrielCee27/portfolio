@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import Title from "./Text/Title";
-import Pills from "./Pills";
+import Pills from "./plls";
 
 const WORK_EXPERIENCE = [
   {
