@@ -35,21 +35,16 @@ const PROJECTS: Project[] = [
     type: "Web Development",
     image: "/images/projects/jesse-orrico-60373-unsplash.jpeg",
   },
-  {
-    name: "EEG Capstone",
-    type: "Web Development",
-    image: "/images/projects/jesse-orrico-60373-unsplash.jpeg",
-  },
 ];
 
 const Projects = () => {
   return (
     <>
       <Title aboveTitle="MY WORK">Projects</Title>
-      <div className="flex flex-col md:flex-row py-10 gap-5 flex-wrap items-center justify-start">
+      <ul className="grid grid-cols-[repeat(auto-fill,_minmax(256px,_1fr))] w-full py-10 gap-5">
         {PROJECTS.map((p) => {
           return (
-            <div className="w-64 h-64 relative flex flex-col justify-end cursor-pointer">
+            <li className="m-auto w-full h-64 relative flex flex-col justify-end cursor-pointer">
               <NextImage
                 fill
                 style={{ objectFit: "cover" }}
@@ -63,10 +58,10 @@ const Projects = () => {
                   <Pills items={["Flask", "Python"]} />
                 </span>
               </div>
-            </div>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </>
   );
 };
