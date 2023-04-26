@@ -121,8 +121,31 @@ a {
   width: 8px;
   margin-right: 5px;
   margin-bottom: 3px;
+  height: 1px;
+  margin-top: 10px
 }
 
 svg {
   color: white
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/* width */
+#career-tabs::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+#career-tabs::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+#career-tabs::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
 }
