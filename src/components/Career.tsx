@@ -100,7 +100,7 @@ const Career: FC = () => {
       <div className="flex flex-col gap-3 md:gap-24 md:flex-row pt-4">
         <ul
           id="career-tabs"
-          className="pb-1 md:pb-0 overflow-x-auto flex flex-row gap-1 md:gap-4 md:flex-col md:w-[40%] md:justify-start md:overflow-x-auto"
+          className="p-1 bg-blue-100/20 rounded-full md:rounded-none md:bg-transparent md:pb-0 overflow-x-auto flex flex-row gap-1 md:gap-4 md:flex-col md:w-[40%] md:justify-start md:overflow-x-auto"
         >
           {WORK_EXPERIENCE.map((ex, index) => {
             const isSelected = selectedTab == index;

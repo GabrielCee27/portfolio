@@ -136,7 +136,8 @@ ul {
 
 /* width */
 #career-tabs::-webkit-scrollbar {
-  width: 5px;
+  /* width: 5px; */
+  display: none;
 }
 
 /* Track */
