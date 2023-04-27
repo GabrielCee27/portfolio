@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import Avatar from "/public/images/avatar.png";
 import NextImage from "next/image";
-import AboveTitle from "./Text/AboveTitle";
 import Title from "./Text/Title";
 import ExternalIconLinks from "./ExternalIconLinks";
 
@@ -11,7 +10,7 @@ const Hero = () => {
   return (
     <section
       id="#"
-      className="min-h-screen flex flex-col justify-evenly md:flex-row items-center md:justify-center"
+      className="min-h-[90vh] flex flex-col justify-evenly md:flex-row items-center md:justify-center"
     >
       <div className="flex flex-col-reverse items-start justify-end gap-4 md:flex-row md:justify-between md:gap-0 md:items-center w-full">
         <div className="flex flex-col gap-5 justify-center max-w-md">
@@ -21,17 +20,10 @@ const Hero = () => {
           <p className={`${inter.className} text-sm text-gray-200`}>
             Full Stack Software Engineer with 4+ years of experience with an
             emphasis in React. Currently, I am the team lead of Seller Retention
-            at{" "}
-            <a
-              href="https://www.therealreal.com"
-              target="_blank"
-              className="underline decoration-dotted"
-            >
-              The RealReal
-            </a>{" "}
-            which involves working in a fast-pace agile environment and ensuring
-            seller facing features are delivered on time. I am excited about any
-            opportunity involving customer facing web applications.
+            at The RealReal which involves working in a fast-pace agile
+            environment and ensuring seller facing features are delivered on
+            time. I am excited about any opportunity involving customer facing
+            web applications.
           </p>
           <div className="flex flex-row gap-5">
             <ExternalIconLinks />
@@ -41,6 +33,9 @@ const Hero = () => {
         <div className="hidden md:flex items-end h-72 w-64 bg-blue-50 rounded-md">
           <NextImage src={Avatar} alt="avatar" />
         </div>
+      </div>
+      <div className="md:hidden h-72 w-64 bg-blue-50 rounded-md">
+        <NextImage src={Avatar} alt="avatar" />
       </div>
       {/* <div className="flex items-end justify-start md:hidden bg-blue-50 w-screen h-52">
         <NextImage src={Avatar} alt="avatar" height={200} width={200} />
