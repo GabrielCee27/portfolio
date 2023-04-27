@@ -105,7 +105,7 @@ const Career: FC = () => {
           {WORK_EXPERIENCE.map((ex, index) => {
             const isSelected = selectedTab == index;
             return (
-              <li>
+              <li key={index}>
                 <button
                   className={`${
                     isSelected ? "bg-blue-300" : ""
@@ -136,6 +136,7 @@ const Career: FC = () => {
                 id={`career-tabpanel-${index}`}
                 role="tabpanel"
                 aria-labelledby={`career-tab-${index}`}
+                key={index}
               >
                 <div className="flex flex-col gap-3">
                   <p>{ex.role}</p>

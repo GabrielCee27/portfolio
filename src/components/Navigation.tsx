@@ -50,8 +50,8 @@ const Navigation: FC = () => {
               } shadow-md`}
             >
               <div className="flex flex-col items-end pt-40 gap-9 items-center">
-                {NAV_ITEMS.map((item) => (
-                  <a href={item.href} onClick={handleClose}>
+                {NAV_ITEMS.map((item, index) => (
+                  <a href={item.href} onClick={handleClose} key={index}>
                     {item.label}
                   </a>
                 ))}

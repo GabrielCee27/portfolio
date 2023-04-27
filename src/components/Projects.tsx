@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { Fragment, ReactNode } from "react";
 import Title from "./Text/Title";
 import NextImage from "next/image";
 import Pills from "./Pills";
@@ -42,9 +42,12 @@ const Projects = () => {
     <>
       <Title aboveTitle="MY WORK">Projects</Title>
       <ul className="grid grid-cols-[repeat(auto-fill,_minmax(256px,_1fr))] w-full py-10 gap-5">
-        {PROJECTS.map((p) => {
+        {PROJECTS.map((p, index) => {
           return (
-            <li className="m-auto w-full h-64 relative flex flex-col justify-end cursor-pointer">
+            <li
+              className="m-auto w-full h-64 relative flex flex-col justify-end cursor-pointer"
+              key={index}
+            >
               <NextImage
                 fill
                 style={{ objectFit: "cover" }}
