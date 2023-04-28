@@ -49,7 +49,7 @@ const Projects = () => {
                 />
               </div>
 
-              <div className="relative rounded-b bg-slate-100 py-4 px-3 text-black flex flex-col gap-1 justify-between">
+              <div className="relative rounded-b bg-slate-100 p-5 text-black flex flex-col gap-1 justify-between">
                 <div>
                   <p>{p.name}</p>
                   <p className="text-sm text-gray-700 py-3">{p.desc}</p>
