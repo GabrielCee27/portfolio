@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import Title from "./Text/Title";
 import Pills from "./Pills";
+import { ChevronRightIcon } from "@heroicons/react/24/solid";
 
 const DescItems: FC<{ items: React.ReactNode[] }> = ({ items }) => {
   return (
@@ -109,7 +110,7 @@ const Career: FC = () => {
                 <button
                   className={`${
                     isSelected ? "bg-blue-300" : ""
-                  } rounded-full py-2 px-3 md:w-[90%] md:text-left md:rounded-md md:py-3 md:px-4 whitespace-nowrap`}
+                  } rounded-full py-2 px-3 md:w-[90%] md:text-left md:rounded-md md:py-3 md:px-4 whitespace-nowrap md:flex md:flex-row md:justify-between`}
                   onClick={() => {
                     setSelectedTab(index);
                   }}
@@ -119,6 +120,9 @@ const Career: FC = () => {
                   aria-controls={`career-tabpanel-${index}`}
                 >
                   {ex.company}
+                  {isSelected ? (
+                    <ChevronRightIcon className="hidden md:block fill-white h-5 w-5 mt-auto mb-auto" />
+                  ) : null}
                 </button>
               </li>
             );
