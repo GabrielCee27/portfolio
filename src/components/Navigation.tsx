@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import AnimatedHamburger from "./AnimatedHamburger";
 
 const NAV_ITEMS = [
+  { href: "#skills", label: "Skills", current: false },
   { href: "#experience", label: "Experience", current: false },
   { href: "#projects", label: "Projects", current: false },
 ] as const;
