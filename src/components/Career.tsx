@@ -5,7 +5,7 @@ import { ChevronRightIcon } from "@heroicons/react/24/solid";
 
 const DescItems: FC<{ items: React.ReactNode[] }> = ({ items }) => {
   return (
-    <ul className="m-0 p-0 grid gap-2 md:gap-1">
+    <ul className="m-0 p-0 grid gap-2 md:gap-1 styled-list">
       {items.map((item, index) => (
         <li className="grid grid-cols-[auto_1fr] gap-1" key={index}>
           {item}
@@ -153,9 +153,7 @@ const Career: FC = () => {
                   ) : null}
                 </div>
                 <div className="h-[.5px] w-full bg-gray-300/50" />
-                <div className="career-body text-sm text-gray-200">
-                  {ex.description}
-                </div>
+                <div className="text-sm text-gray-200">{ex.description}</div>
               </div>
             );
           })}

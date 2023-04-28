@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Career from "@/components/Career";
 import Projects from "@/components/Projects";
+import About from "@/components/About";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -30,6 +31,9 @@ export default function Home() {
 
       <main className="w-full min-h-screen px-10 max-w-7xl m-auto md:px-16 pb-3 mt-[72px] md:mt-0">
         <Hero />
+        <section id="about">
+          <About />
+        </section>
         <section id="experience" className={SECTION_PADDING}>
           <Career />
         </section>

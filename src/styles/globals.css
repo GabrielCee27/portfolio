@@ -114,7 +114,7 @@ a {
   margin-bottom: 3px;
 }
 
-.career-body li::before {
+.styled-list li::before {
   content: "";
   display: inline-block;
   border: 1px solid grey;

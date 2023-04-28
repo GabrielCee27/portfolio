@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section
       id="#"
-      className="min-h-[90vh] flex flex-col justify-evenly md:flex-row items-center md:justify-center"
+      className="min-h-screen flex flex-col justify-evenly md:flex-row items-center md:justify-center"
     >
       <div className="flex flex-col-reverse items-start justify-end gap-4 md:flex-row md:justify-between md:gap-0 md:items-center w-full">
         <div className="flex flex-col gap-5 justify-center max-w-md">
