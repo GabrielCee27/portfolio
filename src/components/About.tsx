@@ -11,10 +11,15 @@ const SkillCard: FC<{
     <div className="grid gap-4 p-7 px-10 sm:px-7 bg-white text-black text-center shadow rounded w-72 h-72 m-auto">
       <div className="w-fit m-auto">{Icon}</div>
       <p>{title}</p>
-      <ul className="styled-list text-sm text-left flex flex-col gap-1">
-        {skills.map((skill, index) => (
-          <li key={index}>{skill}</li>
-        ))}
+      <ul className="text-sm text-left grid grid-cols-2 gap-1">
+        {skills.map((skill, index) => {
+          const isEven = index % 2 == 0;
+          return (
+            <li key={index} className={isEven ? "text-left" : "text-right"}>
+              {skill}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
@@ -29,9 +34,9 @@ const ICON_CLASSNAME = "h-5 w-5 fill-blue-300";
 const About: FC = () => {
   return (
     <div>
-      <Title aboveTitle="Who I am">About Me</Title>
+      <Title aboveTitle="SKILLS">Specialized In</Title>
       <p className="py-10 text-center">some content here</p>
-      <div className="flex flex-col justify-around md:flex-row gap-6">
+      <div className="flex flex-col flex-wrap justify-around md:flex-row gap-6">
         <SkillCard
           Icon={
             <IconBox>
@@ -42,7 +47,8 @@ const About: FC = () => {
           }
           title="Programing Languages"
           skills={[
-            "TypeScript / JavaScript",
+            "TypeScript",
+            "JavaScript",
             "Elixir",
             "Ruby",
             "Pyton",
