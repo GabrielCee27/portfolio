@@ -15,10 +15,11 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     name: "Portfolio Site",
-    image: "/images/projects/jesse-orrico-60373-unsplash.jpeg",
-    desc: "Built a custom portfolio site using Next.js and Tailwind.",
+    image: "/images/projects/portfolio-site.jpg",
+    desc: "Latest personal website to practice with Tailwind.",
     tech: ["Next.js", "Tailwind"],
     githubLink: "https://github.com/GabrielCee27/portfolio",
+    demoLink: "https://gabriel-cisneros.com",
   },
 ];
 
@@ -30,14 +31,10 @@ const Projects = () => {
       <Title aboveTitle="MY WORK">Projects</Title>
       <ul className="grid grid-cols-[repeat(auto-fill,_minmax(256px,_1fr))] w-full py-10 gap-5">
         {PROJECTS.map((p, index) => {
-          const link = p.demoLink || p.githubLink;
           return (
             <li
               className="m-auto w-full h-80 grid grid-rows-[40%_auto] cursor-pointer"
               key={index}
-              onClick={() => {
-                link && window.open(link, "_blank");
-              }}
             >
               <div className="relative h-full">
                 <NextImage
