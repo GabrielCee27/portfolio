@@ -9,7 +9,7 @@ import About from "@/components/About";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
-const SECTION_PADDING = "pt-52";
+const SECTION_PADDING = "py-20";
 
 export default function Home() {
   return (
@@ -31,7 +31,7 @@ export default function Home() {
 
       <main className="w-full min-h-screen px-10 max-w-7xl m-auto md:px-16 pb-3 mt-[72px] md:mt-0">
         <Hero />
-        <section id="about">
+        <section id="about" className={SECTION_PADDING}>
           <About />
         </section>
         <section id="experience" className={SECTION_PADDING}>
