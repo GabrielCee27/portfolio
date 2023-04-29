@@ -24,11 +24,9 @@ const Hero = () => {
             Gabriel <span className="text-blue-300">Cisneros.</span>
           </Title>
           <p className={`${inter.className} text-sm text-gray-200`}>
-            Full Stack Software Engineer with 4+ years of experience with an
-            emphasis in React. Currently, I am the team lead of Seller Retention
-            at The RealReal which involves working in a fast-pace agile
-            environment and ensuring seller facing features are delivered on
-            time. I am excited about any opportunity involving customer facing
+            Full Stack Software Engineer with 4+ years of experience with large
+            companies and small startups. Proficient in React, Next.js, and
+            TypeScript. Excited about any opportunity involving customer facing
             web applications.
           </p>
           <div className="flex flex-row gap-5">

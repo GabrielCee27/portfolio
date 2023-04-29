@@ -1,6 +1,14 @@
 import { FC } from "react";
 import Title from "./Text/Title";
-import { CodeBracketIcon, GlobeAltIcon } from "@heroicons/react/24/solid";
+import {
+  CodeBracketIcon,
+  GlobeAltIcon,
+  CogIcon,
+} from "@heroicons/react/20/solid";
+import DottedExternalLink from "./Links/DottedExternalLink";
+
+const USF_CS_LINK =
+  "https://www.usfca.edu/arts-sciences/programs/undergraduate/computer-science/program-overview";
 
 const SkillCard: FC<{
   Icon: React.ReactNode;
@@ -8,10 +16,10 @@ const SkillCard: FC<{
   skills: string[];
 }> = ({ title, skills, Icon }) => {
   return (
-    <div className="grid gap-4 p-7 px-10 sm:px-7 bg-white text-black text-center shadow rounded w-72 h-72 m-auto">
+    <div className="grid grid-cols-1 grid-rows-[25%_20%_auto] gap-1 p-7 px-10 sm:px-7 bg-white text-black text-center shadow rounded w-72 h-72 m-auto">
       <div className="w-fit m-auto">{Icon}</div>
-      <p>{title}</p>
-      <ul className="text-sm text-left grid grid-cols-2 gap-1">
+      <p className="m-auto">{title}</p>
+      <ul className="text-sm text-left grid grid-cols-2 gap-1 pt-2">
         {skills.map((skill, index) => {
           const isEven = index % 2 == 0;
           return (
@@ -26,23 +34,34 @@ const SkillCard: FC<{
 };
 
 const IconBox: FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <div className="p-3 bg-blue-100/50 rounded-xl">{children}</div>;
+  return <div className="p-3 bg-blue-100/40 rounded-xl">{children}</div>;
 };
 
-const ICON_CLASSNAME = "h-5 w-5 fill-blue-300";
+const ICON_CLASSNAME = "h-6 w-6 fill-blue-300";
 
 const About: FC = () => {
   return (
     <div>
       <Title aboveTitle="SKILLS">Specialized In</Title>
-      <p className="py-10 text-center">some content here</p>
+      <p className="py-10 text-center">
+        After graduating with a BS in Computer Science from the{" "}
+        <DottedExternalLink href={USF_CS_LINK}>
+          University of San Franciso
+        </DottedExternalLink>{" "}
+        I dove head first into{" "}
+        <DottedExternalLink href="https://react.dev/">React</DottedExternalLink>{" "}
+        and web development. Currently, I am the team lead of Seller Retention
+        at The RealReal which involves working in a fast-pace agile environment
+        and ensuring seller facing features are delivered on time.
+      </p>
+      <p className="text-center pb-6">
+        Here are the main tools I'm familair with
+      </p>
       <div className="flex flex-col flex-wrap justify-around md:flex-row gap-6">
         <SkillCard
           Icon={
             <IconBox>
-              <CodeBracketIcon
-                className={ICON_CLASSNAME + " stroke-1 stroke-blue-300"}
-              />
+              <CodeBracketIcon className={ICON_CLASSNAME} />
             </IconBox>
           }
           title="Programing Languages"
@@ -51,7 +70,7 @@ const About: FC = () => {
             "JavaScript",
             "Elixir",
             "Ruby",
-            "Pyton",
+            "Python",
             "C/C++",
           ]}
         />
@@ -59,21 +78,24 @@ const About: FC = () => {
         <SkillCard
           Icon={
             <IconBox>
-              <GlobeAltIcon
-                className={ICON_CLASSNAME + " stroke-0 stroke-blue-300"}
-              />
+              <GlobeAltIcon className={ICON_CLASSNAME} />
             </IconBox>
           }
           title="Web Technologies"
-          skills={["React", "GraphQL", "Sass", "Apollo Client", "Chakra UI"]}
+          skills={[
+            "React",
+            "GraphQL",
+            "REST API",
+            "Sass",
+            "HTML/CSS",
+            "Chakra UI",
+          ]}
         />
 
         <SkillCard
           Icon={
             <IconBox>
-              <CodeBracketIcon
-                className={ICON_CLASSNAME + " stroke-1 stroke-blue-300"}
-              />
+              <CogIcon className={ICON_CLASSNAME} />
             </IconBox>
           }
           title="Frameworks"
