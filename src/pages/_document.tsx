@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import ExternalIconLinks from "@/components/ExternalIconLinks";
+import DottedExternalLink from "@/components/Links/DottedExternalLink";
 
 export default function Document() {
   return (
@@ -15,13 +16,13 @@ export default function Document() {
           <p>Built by Gabriel Cisneros</p>
           <p>
             Design created by{" "}
-            <a
-              href="https://www.figma.com/community/file/1160861462615915842"
-              target="_blank"
-              className="underline decoration-dotted"
-            >
+            <DottedExternalLink href="https://www.figma.com/community/file/1160861462615915842">
               Caleb Nyong
-            </a>
+            </DottedExternalLink>{" "}
+            with inspiration from{" "}
+            <DottedExternalLink href="https://brittanychiang.com/">
+              brittanychiang.com
+            </DottedExternalLink>
           </p>
         </footer>
       </body>
