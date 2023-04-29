@@ -70,7 +70,7 @@ const About: FC = () => {
         <p className="text-center">Here are the main tools I'm familair with</p>
       </div>
 
-      <div className="flex flex-col gap-5 md:flex-row md:gap-1 md:justify-around">
+      <div className="flex flex-col gap-5 md:flex-row md:gap-2 md:justify-around">
         <SkillCard
           Icon={
             <IconBox>
