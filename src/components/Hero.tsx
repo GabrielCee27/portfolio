@@ -7,6 +7,12 @@ import ExternalIconLinks from "./ExternalIconLinks";
 const inter = Inter({ subsets: ["latin"] });
 
 const Hero = () => {
+  const avatarCard = (
+    <div className="flex items-end h-72 w-64 bg-blue-50 rounded-md">
+      <NextImage src={Avatar} alt="avatar" />
+    </div>
+  );
+
   return (
     <section
       id="#"
@@ -30,13 +36,10 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="hidden md:flex items-end h-72 w-64 bg-blue-50 rounded-md">
-          <NextImage src={Avatar} alt="avatar" />
-        </div>
+        <div className="hidden md:block">{avatarCard}</div>
       </div>
-      <div className="md:hidden h-72 w-64 bg-blue-50 rounded-md">
-        <NextImage src={Avatar} alt="avatar" />
-      </div>
+      <div className="block md:hidden">{avatarCard}</div>
+
       {/* <div className="flex items-end justify-start md:hidden bg-blue-50 w-screen h-52">
         <NextImage src={Avatar} alt="avatar" height={200} width={200} />
       </div> */}
