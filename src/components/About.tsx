@@ -16,7 +16,7 @@ const SkillCard: FC<{
   skills: string[];
 }> = ({ title, skills, Icon }) => {
   return (
-    <div className="grid grid-cols-1 grid-rows-[25%_20%_auto] gap-1 p-7 px-10 sm:px-7 bg-white text-black text-center shadow rounded w-72 h-72 m-auto">
+    <div className="grid grid-cols-1 grid-rows-[25%_20%_auto] gap-1 p-7 px-10 sm:px-7 bg-white text-black text-center drop-shadow rounded w-72 h-72 m-auto">
       <div className="w-fit m-auto">{Icon}</div>
       <p className="m-auto">{title}</p>
       <ul className="text-sm text-left grid grid-cols-2 gap-1 pt-2">
