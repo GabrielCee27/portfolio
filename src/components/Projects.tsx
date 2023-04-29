@@ -16,7 +16,7 @@ const PROJECTS: Project[] = [
   {
     name: "Portfolio Site",
     image: "/images/projects/portfolio-site.jpg",
-    desc: "Latest personal website to practice with Tailwind.",
+    desc: "Latest personal website built with Next.js and Tailwind.",
     tech: ["Next.js", "Tailwind"],
     githubLink: "https://github.com/GabrielCee27/portfolio",
     demoLink: "https://gabriel-cisneros.com",
