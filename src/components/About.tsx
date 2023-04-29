@@ -42,21 +42,34 @@ const ICON_CLASSNAME = "h-6 w-6 fill-blue-300";
 const About: FC = () => {
   return (
     <div>
-      <Title aboveTitle="SKILLS">Specialized In</Title>
-      <p className="py-10 text-center">
-        After graduating with a BS in Computer Science from the{" "}
-        <DottedExternalLink href={USF_CS_LINK}>
-          University of San Franciso
-        </DottedExternalLink>{" "}
-        I dove head first into{" "}
-        <DottedExternalLink href="https://react.dev/">React</DottedExternalLink>{" "}
-        and web development. Currently, I am the team lead of Seller Retention
-        at The RealReal which involves working in a fast-pace, agile environment
-        and ensuring seller facing features are delivered on time.
-      </p>
-      <p className="text-center pb-6">
-        Here are the main tools I'm familair with
-      </p>
+      <Title aboveTitle="WHO I AM">About Me</Title>
+      <div className="flex flex-col gap-5 py-10">
+        <p className="text-left">
+          After graduating with a BS in Computer Science from the{" "}
+          <DottedExternalLink href={USF_CS_LINK}>
+            University of San Franciso
+          </DottedExternalLink>{" "}
+          I dove head first into{" "}
+          <DottedExternalLink href="https://react.dev/">
+            React
+          </DottedExternalLink>{" "}
+          and web development. My first "aha" moment came when, with a help of a
+          peer, we created a google-like collobaration feature to signify which
+          employees were working on the same page. I've continued with web
+          development ever since.
+        </p>
+
+        <p className="text-left">
+          Currently, I'm the team lead of Seller Retention at{" "}
+          <DottedExternalLink href="https://www.therealreal.com/about">
+            The RealReal
+          </DottedExternalLink>
+          . This involves working in a fast-pace, agile environment and ensuring
+          seller facing features are delivered on time.
+        </p>
+        <p className="text-center">Here are the main tools I'm familair with</p>
+      </div>
+
       <div className="flex flex-col gap-5 md:flex-row md:gap-1 md:justify-around">
         <SkillCard
           Icon={
@@ -65,14 +78,7 @@ const About: FC = () => {
             </IconBox>
           }
           title="Programing Languages"
-          skills={[
-            "TypeScript",
-            "JavaScript",
-            "Elixir",
-            "Ruby",
-            "Python",
-            "C/C++",
-          ]}
+          skills={["TypeScript", "JavaScript", "Elixir", "Ruby", "Python"]}
         />
 
         <SkillCard
@@ -86,9 +92,9 @@ const About: FC = () => {
             "React",
             "GraphQL",
             "REST API",
+            "Node.js",
             "Sass",
-            "HTML/CSS",
-            "Chakra UI",
+            "Socket.IO",
           ]}
         />
 
