@@ -1,7 +1,10 @@
 import { FC, useState } from "react";
 import Title from "./Text/Title";
 import Pills from "./Pills";
-import { ChevronRightIcon } from "@heroicons/react/24/solid";
+import {
+  ChevronRightIcon,
+  ArrowTopRightOnSquareIcon,
+} from "@heroicons/react/24/solid";
 
 const DescItems: FC<{ items: React.ReactNode[] }> = ({ items }) => {
   return (
@@ -16,7 +19,7 @@ const DescItems: FC<{ items: React.ReactNode[] }> = ({ items }) => {
 };
 
 interface Experience {
-  company: string;
+  company: { name: string; link?: string };
   role: string;
   location: string;
   dates: string;
@@ -26,7 +29,10 @@ interface Experience {
 
 const WORK_EXPERIENCE: Experience[] = [
   {
-    company: "The RealReal",
+    company: {
+      name: "The RealReal",
+      link: "https://www.therealreal.com/about",
+    },
     role: "Senior Full Stack Engineer",
     location: "Remote",
     dates: "Nov 2020 - Current",
@@ -43,7 +49,7 @@ const WORK_EXPERIENCE: Experience[] = [
     technology: ["Next.js", "TypeScript", "GraphQL", "Elixir", "Ruby on Rails"],
   },
   {
-    company: "H.O.M.E",
+    company: { name: "H.O.M.E" },
     role: "Freelance Full Stack Engineer",
     location: "Remote",
     dates: "April 2020 - Nov 2020",
@@ -59,7 +65,7 @@ const WORK_EXPERIENCE: Experience[] = [
     technology: ["React", "AWS", "Django", "Python"],
   },
   {
-    company: "Conventus",
+    company: { name: "Conventus", link: "https://www.cvlending.com/" },
     role: "Full Stack Developer",
     location: "San Francisco, CA",
     dates: "May 2019 - June 2020",
@@ -75,7 +81,10 @@ const WORK_EXPERIENCE: Experience[] = [
     technology: ["Django", "React", "Express", "Socket.IO", "Python"],
   },
   {
-    company: "JAKKS Pacific",
+    company: {
+      name: "JAKKS Pacific",
+      link: "https://www.jakks.com/corporate/",
+    },
     role: "Full Stack Developer Intern",
     location: "Santa Monica, CA",
     dates: "May 2018 - Aug 2018",
@@ -119,7 +128,7 @@ const Career: FC = () => {
                   aria-selected={isSelected ? "true" : "false"}
                   aria-controls={`career-tabpanel-${index}`}
                 >
-                  {ex.company}
+                  {ex.company.name}
                   {isSelected ? (
                     <ChevronRightIcon className="hidden md:block fill-white h-5 w-5 mt-auto mb-auto" />
                   ) : null}
@@ -143,7 +152,22 @@ const Career: FC = () => {
                 key={index}
               >
                 <div className="flex flex-col gap-3">
-                  <p>{ex.role}</p>
+                  <p>
+                    {ex.role}
+                    {ex.company.link ? (
+                      <span className="text-blue-300">
+                        {" "}
+                        @{" "}
+                        <a
+                          href={ex.company.link}
+                          target="_blank"
+                          className="hover:underline decoration-dotted"
+                        >
+                          {ex.company.name}
+                        </a>
+                      </span>
+                    ) : null}
+                  </p>
                   <p className="text-xs text-gray-300">{ex.location}</p>
                   <p className="text-xs text-gray-300 font-medium">
                     {ex.dates}
