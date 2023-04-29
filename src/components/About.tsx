@@ -51,13 +51,13 @@ const About: FC = () => {
         I dove head first into{" "}
         <DottedExternalLink href="https://react.dev/">React</DottedExternalLink>{" "}
         and web development. Currently, I am the team lead of Seller Retention
-        at The RealReal which involves working in a fast-pace agile environment
+        at The RealReal which involves working in a fast-pace, agile environment
         and ensuring seller facing features are delivered on time.
       </p>
       <p className="text-center pb-6">
         Here are the main tools I'm familair with
       </p>
-      <div className="flex flex-col flex-wrap justify-around md:flex-row gap-6">
+      <div className="flex flex-col gap-5 md:flex-row md:gap-1 md:justify-around">
         <SkillCard
           Icon={
             <IconBox>
