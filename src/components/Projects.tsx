@@ -33,7 +33,7 @@ const Projects = () => {
         {PROJECTS.map((p, index) => {
           return (
             <li
-              className="m-auto w-full h-80 grid grid-rows-[40%_auto] cursor-pointer drop-shadow"
+              className="m-auto w-full h-80 grid grid-rows-[40%_auto] drop-shadow"
               key={index}
             >
               <div className="relative h-full">
