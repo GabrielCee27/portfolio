@@ -53,19 +53,9 @@ const About: FC = () => {
           <DottedExternalLink href="https://react.dev/">
             React
           </DottedExternalLink>{" "}
-          and web development. My first "aha" moment came when, with a help of a
-          peer, we created a google-like collobaration feature to signify which
-          employees were working on the same page. I've continued with web
+          and web development. My first "aha" moment came when I helped a peer create a google-like collobaration feature to signify which
+          employees were working on the same loan management page. I've continued with web
           development ever since.
-        </p>
-
-        <p className="text-left">
-          Currently, I'm the team lead of Seller Retention at{" "}
-          <DottedExternalLink href="https://www.therealreal.com/about">
-            The RealReal
-          </DottedExternalLink>
-          . This involves working in a fast-pace, agile environment and ensuring
-          seller facing features are delivered on time.
         </p>
         <p className="text-center">Here are the main tools I'm familair with</p>
       </div>

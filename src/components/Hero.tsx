@@ -24,10 +24,8 @@ const Hero = () => {
             Gabriel <span className="text-blue-300">Cisneros.</span>
           </Title>
           <p className={`${inter.className} text-sm text-gray-200`}>
-            Full Stack Software Engineer with 4+ years of experience with large
-            companies and small startups. Proficient in React, Next.js, and
-            TypeScript. Excited about any opportunity involving customer facing
-            web applications.
+          Software Engineer with 4+ years of experience creating web applications with cutting-edge engineering solutions for internal and external facing applications.
+           Proven ability to lead  projects to production. Extensive expertise in React as well as micro-services.
           </p>
           <div className="flex flex-row gap-5">
             <ExternalIconLinks />
