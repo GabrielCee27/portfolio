@@ -1,17 +1,15 @@
 import Image from "next/image";
-import GithubIcon from "/public/icons/github-outline-svgrepo.svg";
-import LinkedInIcon from "/public/icons/linkedin-outline-svgrepo.svg";
 import { FC } from "react";
 
 const EXTERNAL_LINKS = [
   {
     href: "https://github.com/GabrielCee27",
-    icon: GithubIcon,
+    icon: "/icons/github-outline-svgrepo.svg",
     alt: "Github Icon",
   },
   {
     href: "https://www.linkedin.com/in/gabe-cisneros",
-    icon: LinkedInIcon,
+    icon: "/icons/linkedin-outline-svgrepo.svg",
     alt: "Linked In Icon",
   },
 ];

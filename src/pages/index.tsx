@@ -37,9 +37,9 @@ export default function Home() {
         <section id="experience" className={SECTION_PADDING}>
           <Career />
         </section>
-        <section id="projects" className={SECTION_PADDING}>
+        {/* <section id="projects" className={SECTION_PADDING}>
           <Projects />
-        </section>
+        </section> */}
       </main>
     </>
   );

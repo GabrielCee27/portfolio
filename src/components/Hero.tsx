@@ -1,5 +1,4 @@
 import { Inter } from "next/font/google";
-import Avatar from "/public/images/avatar.png";
 import NextImage from "next/image";
 import Title from "./Text/Title";
 import ExternalIconLinks from "./ExternalIconLinks";
@@ -7,11 +6,6 @@ import ExternalIconLinks from "./ExternalIconLinks";
 const inter = Inter({ subsets: ["latin"] });
 
 const Hero = () => {
-  const avatarCard = (
-    <div className="flex items-end h-72 w-64 bg-blue-50 rounded-md">
-      <NextImage src={Avatar} alt="avatar" />
-    </div>
-  );
 
   return (
     <section
@@ -31,14 +25,7 @@ const Hero = () => {
             <ExternalIconLinks />
           </div>
         </div>
-
-        <div className="hidden md:block">{avatarCard}</div>
       </div>
-      <div className="block md:hidden">{avatarCard}</div>
-
-      {/* <div className="flex items-end justify-start md:hidden bg-blue-50 w-screen h-52">
-        <NextImage src={Avatar} alt="avatar" height={200} width={200} />
-      </div> */}
     </section>
   );
 };
